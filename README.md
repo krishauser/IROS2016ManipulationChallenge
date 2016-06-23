@@ -31,19 +31,8 @@ See the plugins/reflex_col.py file for more detail.
 This package has been tested on Linux Ubuntu 14.04 but should work with most versions of Linux.
 It should also work with Mac, possibly with a little work.
 
-Foremost, you will need to install the Klamp't Python API from source.  Follow the instructions on
-http://klampt.org, except that once you git clone the Klampt project, you will first need to
-switch to the kh_simdevel git branch as follows:
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-> ...
-> cd Klampt
-> git checkout kh_simdevel
-> ...
-> [continue with the rest of the tutorial]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Note that you will also need to install Assimp and PyQt4.
+Foremost, you will need to install the Klamp't Python API from source.  Follow the Installation 
+Tutorial found on http://klampt.org.  Note that you will also need to install Assimp and PyQt4.
 
 Once Klamp't is installed, download the YCB and APC2015 datasets as follows (note these
 are rather large datasets):
