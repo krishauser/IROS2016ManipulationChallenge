@@ -35,27 +35,33 @@ Foremost, you will need to install the Klamp't Python API from source.  Follow t
 http://klampt.org, except that once you git clone the Klampt project, you will first need to
 switch to the kh_simdevel git branch as follows:
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 > ...
 > cd Klampt
 > git checkout kh_simdevel
 > ...
 > [continue with the rest of the tutorial]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Note that you will also need to install Assimp and PyQt4.
 
 Once Klamp't is installed, download the YCB and APC2015 datasets as follows (note these
 are rather large datasets):
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 > cd IROS2016ManipulationChallenge/data/objects
 > python download_ycb.py
 > python download_apc2015.py
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ## Running the framework ##
 
 The main test file is main.py.  It is run as follows:
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 > python main.py [dataset] [index]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you do not specify a dataset or an index, one will be chosen for you at random.
 You will see a dialog box to edit the transform of the gripper.  Once you press "OK",
