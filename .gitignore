@@ -1,0 +1,5 @@
+*.pyc
+data/objects/ycb
+data/objects/apc2015
+temp.obj
+temp.rob
