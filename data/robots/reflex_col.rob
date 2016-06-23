@@ -1,0 +1,112 @@
+#Converted using URDFtoRob
+#Drivers were added manually
+#
+#Important notes:
+#
+#Mass and motor calibration set essentially at random
+#
+#The tendon drive's connection between the proximal and distal joint
+#needs to be simulated manually
+#
+#1/17/2015
+#Kris Hauser
+
+links	base	pad	swivel_1	proximal_1	distal_1	distal_pad_1	proximal_pad_1	swivel_2	proximal_2	distal_2	distal_pad_2	proximal_pad_2	proximal_3	distal_3	distal_pad_3	proximal_pad_3
+
+parents	-1	0	0	2	3	4	3	0	7	8	9	8	0	12	13	12
+
+axis	0 0 1	0 0 1	0 0 -1	0 -1 0	0 -1 0	0 0 1	0 0 1	0 0 -1	0 -1 0	0 -1 0	0 0 1	0 0 1	0 -1 0	0 -1 0	0 0 1	0 0 1
+
+jointtype	r	r	r	r	r	r	r	r	r	r	r	r	r	r	r	r 
+
+Tparent	1 0 0	0 1 0	0 0 1	0 0 0 \
+-3.55271e-15 -3.60822e-15 -1	-1 0 3.60822e-15	-5.55112e-17 1 -3.55271e-15	0.02 0 0.063 \
+1 2.77556e-16 1.97994e-16	-2.77556e-16 1 -6.75551e-16	-1.97994e-16 6.75551e-16 1	0.0503974 -0.026 0.063 \
+1 -2.22045e-16 2.40508e-17	2.22045e-16 1 6.2004e-16	-2.40508e-17 -6.2004e-16 1	0.01 0 0.0186 \
+1 0 0	0 1 0	0 0 1	0.066 0 -0.005 \
+-3.55271e-15 -3.60822e-15 -1	-1 0 3.60822e-15	-5.55112e-17 1 -3.55271e-15	-0.076 0 0.0085 \
+-3.55271e-15 -3.60822e-15 -1	-1 0 3.60822e-15	-5.55112e-17 1 -3.55271e-15	0 0 0 \
+1 1.66533e-16 -7.33448e-16	-1.66533e-16 1 -1.22459e-15	7.33448e-16 1.22459e-15 1	0.0503974 0.026 0.063 \
+1 -1.11022e-16 9.55493e-16	1.11022e-16 1 1.16908e-15	-9.55493e-16 -1.16908e-15 1	0.01 0 0.0186 \
+1 0 0	0 1 0	0 0 1	0.066 0 -0.005 \
+-3.44169e-15 -3.4972e-15 -1	-1 0 3.60822e-15	-5.55112e-17 1 -3.55271e-15	-0.076 0 0.0085 \
+-3.44169e-15 -3.4972e-15 -1	-1 0 3.60822e-15	-5.55112e-17 1 -3.55271e-15	0 0 0 \
+-1 -3.23109e-15 2.22045e-16	3.23109e-15 -1 -5.55112e-17	2.22045e-16 -5.55112e-17 1	-0.03 0 0.0816 \
+1 0 0	0 1 0	0 0 1	0.066 0 -0.005 \
+-3.9968e-15 -3.71925e-15 -1	-1 2.22045e-16 3.4972e-15	1.11022e-16 1 -3.44169e-15	-0.076 0 0.0085 \
+-3.9968e-15 -3.71925e-15 -1	-1 -4.44089e-16 3.71925e-15	-2.22045e-16 1 -3.9968e-15	0 0 0
+
+qmin	0	0	0	-0.34	-inf	0	0	-1.5708	-0.34	-inf	0	0	-0.34	-inf	0	0
+qmax	0	0	1.5708	2.83	inf	0	0	0	2.83	inf	0	0	2.83 inf	0	0
+
+geometry	reflex/reduced/base_link.STL	reflex/reduced/pad.STL	reflex/reduced/swivel_1.STL	reflex/reduced/proximal_1.STL	reflex/reduced/distal_1.STL	reflex/reduced/distal_pad_1.STL	reflex/reduced/proximal_pad_1.STL	reflex/reduced/swivel_2.STL	reflex/reduced/proximal_2.STL	reflex/reduced/distal_2.STL	reflex/reduced/distal_pad_2.STL	reflex/reduced/proximal_pad_2.STL	reflex/reduced/proximal_3.STL	reflex/reduced/distal_3.STL	reflex/reduced/distal_pad_3.STL	reflex/reduced/proximal_pad_3.STL
+
+#the distal links are shifted
+geomtransform 4		1 0 0 0.01  0 1 0 0  0 0 1 0.007  0 0 0 1 
+geomtransform 5 	1 0 0 0  0 1 0 -0.004  0 0 1 -0.01  0 0 0 1 
+geomtransform 9		1 0 0 0.01  0 1 0 0  0 0 1 0.007  0 0 0 1 
+geomtransform 10 	1 0 0 0  0 1 0 -0.004  0 0 1 -0.01  0 0 0 1 
+geomtransform 13	1 0 0 0.01  0 1 0 0  0 0 1 0.007  0 0 0 1 
+geomtransform 14 	1 0 0 0  0 1 0 -0.004  0 0 1 -0.01  0 0 0 1 
+	
+mass	0.5	0.1	0.05	0.03	0.05	0.005	0.005	0.05	0.03	0.03	0.005	0.005	0.03		0.03	0.005	0.005
+																																											
+automass																																											
+																																											
+torquemax	inf	inf	10	10	5	inf	inf	10	10	5	inf	inf	20	5	inf	inf
+																																											
+velmax	0	0	1	1	inf	0	0	1	1	inf	0	0	1	inf	0	0
+																																											
+accmax	0	0	10	10	10	0	0	10	10	10	0	0	10	10	0	0
+																																											
+																																											
+joint weld 0																																											
+joint weld 1																																											
+joint normal 2																																											
+joint spin 3																																											
+joint spin 4																																											
+joint weld 5																																											
+joint weld 6																																											
+joint normal 7																																											
+joint spin 8																																											
+joint spin 9																																											
+joint weld 10																																											
+joint weld 11																																											
+joint spin 12																																											
+joint spin 13																																											
+joint weld 14																																											
+joint weld 15																																											
+
+		
+driver affine 2    2 7    1.5708 -1.5708  0  0    0 1   0 1  -10 10																																										
+driver normal 3																																											
+driver normal 4																																											
+driver normal 8																																											
+driver normal 9																																											
+driver normal 12																																											
+driver normal 13																																											
+																																											
+																																											
+																																											
+																																											
+#for separated normal links																																											
+servoP 	5	5	2	5	2	10	2																																			
+servoI	0	0	0	0	0	0	0																																			
+servoD	0	0	0	0	0	0	0																																			
+																																											
+dryFriction	0.1	0.1	0.1	0.1	0.1	0.1	0.1																																			
+viscousFriction	0.5	0.5	0.5	0.5	0.5	0.5	0.5																																			
+
+
+noselfcollision 0 3  0 4  0 5  0 6  0 8  0 9  0 10  0 11 0 12 0 13 0 14  0 15
+noselfcollision 1 2  1 3  1 4  1 7  1 8  1 9  1 12  1 13 
+noselfcollision 2 4  2 5   2 6   2 7  2 8   2 9   2 10  2 11 2 12  2 13  2 14  2 15
+noselfcollision 3 5  3 7   3 8   3 9  3 12  3 13
+noselfcollision 4 6  4 7   4 8   4 9  4 12  4 13
+noselfcollision 5 7
+noselfcollision 7 9  7 10  7 11  7 12  7 13  7 14  7 15
+noselfcollision 8 10  8 12  8 13
+noselfcollision 9 11  9 12  9 13
+noselfcollision 12 15
+
+property sensors "reflex_col_sensors.xml"

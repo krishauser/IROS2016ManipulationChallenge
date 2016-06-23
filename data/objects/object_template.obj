@@ -1,0 +1,7 @@
+#A boilerplate template for an object
+mesh %s
+mass %f
+autoMass
+kStiffness 100000
+kDamping 30000
+kRestitution 0.5

@@ -1,0 +1,48 @@
+### Boilerplate kinematics of a floating (translating and rotating) cube with a robot hand mounted on it
+TParent 1 0 0   0 1 0   0 0 1   0 0 0  \
+1 0 0   0 1 0   0 0 1   0 0 0  \
+1 0 0   0 1 0   0 0 1   0 0 0  \
+1 0 0   0 1 0   0 0 1   0 0 0  \
+1 0 0   0 1 0   0 0 1   0 0 0  \
+1 0 0   0 1 0   0 0 1   0 0 0  
+parents -1 0 1 2 3 4 
+axis 1 0 0   0 1 0    0 0 1     0 0 1     0 1 0     1 0 0 
+jointtype p p p r r r 
+qMin -1 -1 -1  -inf -inf -inf
+qMax  1  1  1   inf  inf  inf 
+q 0 0 0 0 0 0 
+geometry   ""   ""   ""   ""    ""    "data/objects/cube.tri"
+geomscale 1 1 1 1 1 0.01
+mass       0.1 0.1 0.1 0.1 0.1 0.1
+com 0 0 0   0 0 0   0 0 0   0 0 0   0 0 0   0 0 0   
+inertia 0.001 0 0 0 0.001 0 0 0 0.001 \
+   0.001 0 0 0 0.001 0 0 0 0.001 \
+   0.001 0 0 0 0.001 0 0 0 0.001 \
+   0.001 0 0 0 0.001 0 0 0 0.001 \
+   0.001 0 0 0 0.001 0 0 0 0.001 \
+   0.001 0 0 0 0.001 0 0 0 0.001 
+torqueMax  500 500 500 50 50 50 
+accMax     4 4 4 4 4 4 4
+velMax     2 2 2 3 3 3
+
+joint normal 0
+joint normal 1
+joint normal 2
+joint spin 3
+joint spin 4
+joint spin 5
+
+driver normal 0 
+driver normal 1
+driver normal 2
+driver normal 3
+driver normal 4
+driver normal 5
+
+servoP 5000 5000 5000 500 500 500
+servoI 10 10 10 .5 .5 .5
+servoD 100 100 100 10 10 10
+viscousFriction 50 50 50 50 50 50
+dryFriction 1 1 1 1 1 1
+
+mount 5 "%s" 1 0 0   0 1 0   0 0 1   0 0 0 as "%s"
