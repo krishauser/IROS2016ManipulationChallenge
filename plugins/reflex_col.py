@@ -243,7 +243,9 @@ class HandEmulator(ActuatorEmulator):
         qcmd[self.model.distal_links[1]] = 0
         qcmd[self.model.distal_links[2]] = 0
         vcmd = self.controller.getCommandedVelocity()
-        self.controller.setPIDCommand(qcmd,vcmd)
+        if qcmd != self.controller.getCommandedConfig():
+            #allow queued movements for other joints if fingers are stopped
+            self.controller.setPIDCommand(qcmd,vcmd)
         
     def substep(self,dt):
         #apply forces associated with tendon
