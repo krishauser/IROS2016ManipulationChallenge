@@ -7,7 +7,7 @@ from klampt.simulation import ActuatorEmulator
 gripper_name = 'reflex'
 
 #The Klamp't model name
-klampt_model_name = 'data/reflex_col.rob'
+klampt_model_name = 'data/robots/reflex_col.rob'
 
 #the number of Klamp't model DOFs
 numDofs = 16
