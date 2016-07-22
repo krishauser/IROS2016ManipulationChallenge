@@ -1,0 +1,39 @@
+<sensors>
+  <JointPositionSensor name="encoders" indices="2 3 8 12"/>
+  <DriverTorqueSensor name="current" indices="2 3 8 12" />
+  <ContactSensor name="f1_proximal_takktile_1" link="6" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 -0.007" patchMax="0.007 0.007" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f1_proximal_takktile_2" link="6" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 0.001" patchMax="0.007 0.015" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f1_proximal_takktile_3" link="6" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 0.009" patchMax="0.007 0.023" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f1_proximal_takktile_4" link="6" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 0.017" patchMax="0.007 0.031" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f1_proximal_takktile_5" link="6" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 0.025" patchMax="0.007 0.039" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+
+  <ContactSensor name="f1_distal_takktile_1" link="5" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.011 -0.094" patchMin="-0.007 -0.007" patchMax="0.007 0.007" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f1_distal_takktile_2" link="5" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.011 -0.094" patchMin="-0.007 -0.001" patchMax="0.007 0.013" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f1_distal_takktile_3" link="5" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.011 -0.094" patchMin="-0.007 0.005" patchMax="0.007 0.019" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f1_distal_takktile_4" link="5" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.011 -0.094" patchMin="-0.007 0.011" patchMax="0.007 0.025" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f1_distal_takktile_5" link="5" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.011 -0.094" patchMin="-0.007 0.017" patchMax="0.007 0.031" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+
+  <ContactSensor name="f2_proximal_takktile_1" link="11" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 -0.007" patchMax="0.007 0.007" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f2_proximal_takktile_2" link="11" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 0.001" patchMax="0.007 0.015" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f2_proximal_takktile_3" link="11" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 0.009" patchMax="0.007 0.023" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f2_proximal_takktile_4" link="11" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 0.017" patchMax="0.007 0.031" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f2_proximal_takktile_5" link="11" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 0.025" patchMax="0.007 0.039" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+
+  <ContactSensor name="f2_distal_takktile_1" link="10" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.011 -0.094" patchMin="-0.007 -0.007" patchMax="0.007 0.007" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f2_distal_takktile_2" link="10" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.011 -0.094" patchMin="-0.007 -0.001" patchMax="0.007 0.013" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f2_distal_takktile_3" link="10" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.011 -0.094" patchMin="-0.007 0.005" patchMax="0.007 0.019" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f2_distal_takktile_4" link="10" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.011 -0.094" patchMin="-0.007 0.011" patchMax="0.007 0.025" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f2_distal_takktile_5" link="10" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.011 -0.094" patchMin="-0.007 0.017" patchMax="0.007 0.031" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+
+  <ContactSensor name="f3_proximal_takktile_1" link="15" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 -0.007" patchMax="0.007 0.007" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f3_proximal_takktile_2" link="15" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 0.001" patchMax="0.007 0.015" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f3_proximal_takktile_3" link="15" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 0.009" patchMax="0.007 0.023" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f3_proximal_takktile_4" link="15" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 0.017" patchMax="0.007 0.031" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f3_proximal_takktile_5" link="15" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 0.025" patchMax="0.007 0.039" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+
+  <ContactSensor name="f3_distal_takktile_1" link="14" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.011 -0.094" patchMin="-0.007 -0.007" patchMax="0.007 0.007" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f3_distal_takktile_2" link="14" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.011 -0.094" patchMin="-0.007 -0.001" patchMax="0.007 0.013" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f3_distal_takktile_3" link="14" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.011 -0.094" patchMin="-0.007 0.005" patchMax="0.007 0.019" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f3_distal_takktile_4" link="14" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.011 -0.094" patchMin="-0.007 0.011" patchMax="0.007 0.025" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+  <ContactSensor name="f3_distal_takktile_5" link="14" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.011 -0.094" patchMin="-0.007 0.017" patchMax="0.007 0.031" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
+</sensors>

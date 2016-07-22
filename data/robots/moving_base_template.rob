@@ -45,4 +45,5 @@ servoD 100 100 100 10 10 10
 viscousFriction 50 50 50 50 50 50
 dryFriction 1 1 1 1 1 1
 
+property sensors <sensors><ForceTorqueSensor link="5" hasForce="1 1 1" hasTorque="1 1 1" /></sensors>
 mount 5 "%s" 1 0 0   0 1 0   0 0 1   0 0 0 as "%s"
