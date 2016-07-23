@@ -146,6 +146,7 @@ class HandEmulator(ActuatorEmulator):
     def __init__(self,sim,robotindex=0,link_offset=0,driver_offset=0):
         self.sim = sim
         world = sim.world
+        self.robotindex = robotindex
         self.controller = self.sim.controller(robotindex)
         #rubber for pad
         pad = self.sim.body(world.robotLink(robotindex,link_offset+1))
@@ -203,8 +204,8 @@ class HandEmulator(ActuatorEmulator):
         #find deviation between commanded and actual on proximal joint, use
         #that to determine tendon lengths
         qcmd = self.controller.getCommandedConfig()
-        qactual = self.controller.getSensedConfig()
-        pulls = [qcmd[l] - qactual[l] for l in self.model.proximal_links]
+        qactual = self.sim.getActualConfig(self.robotindex)
+        pulls = [qcmd[l] - qactual[l] for i,l in enumerate(self.model.proximal_links)]
         pullscale = 0.5
         self.tendon_lengths = [0,0,0]
         self.tendon_lengths[0] = max(0,1.0-pulls[0]*pullscale)*0.0215
