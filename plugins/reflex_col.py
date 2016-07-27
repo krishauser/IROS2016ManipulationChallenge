@@ -92,6 +92,7 @@ class HandModel:
         self.proximal_links = [link_offset+i for i in proximal_links]
         self.distal_links = [link_offset+i for i in distal_links]
         self.proximal_drivers = [self.driver_offset+1,self.driver_offset+6,self.driver_offset+10]
+        self.distal_drivers = [self.driver_offset+2,self.driver_offset+7,self.driver_offset+11]
         self.jointLimits = ([qmin[link_offset+proximal_links[0]],qmin[link_offset+proximal_links[1]],qmin[link_offset+proximal_links[2]],0],
                             [qmax[link_offset+proximal_links[0]],qmax[link_offset+proximal_links[1]],qmax[link_offset+proximal_links[2]],0])
     def numCommands(self):
