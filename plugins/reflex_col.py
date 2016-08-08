@@ -1,7 +1,12 @@
-from klampt import se3,vectorops
 from klampt import *
-from klampt.glrobotprogram import *
-from klampt.simulation import ActuatorEmulator
+#Klampt v0.7
+from klampt.math import se3,vectorops
+from klampt.vis.glrobotprogram import *
+from klampt.sim.simulation import ActuatorEmulator
+#Klampt v0.6.x
+#from klampt import se3,vectorops
+#from klampt.glrobotprogram import *
+#from klampt.simulation import ActuatorEmulator
 
 #The hardware name
 gripper_name = 'reflex'
@@ -244,6 +249,9 @@ class HandEmulator(ActuatorEmulator):
         qcmd[self.model.distal_links[1]] = 0
         qcmd[self.model.distal_links[2]] = 0
         vcmd = self.controller.getCommandedVelocity()
+        #print "Hand commanded q / retrieved q:"
+        #for (a,b) in zip(qcmd,self.controller.getCommandedConfig()):
+        #    print "  ",a,b
         if qcmd != self.controller.getCommandedConfig():
             #allow queued movements for other joints if fingers are stopped
             self.controller.setPIDCommand(qcmd,vcmd)
