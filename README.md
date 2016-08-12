@@ -18,8 +18,8 @@ cameras.
 ## Datasets ##
 
 The framework currently supports the following two object datasets:
-- [ycb][http://rll.eecs.berkeley.edu/ycb/]: the YCB dataset.
-- [apc2015][http://rll.berkeley.edu/amazon_picking_challenge/]: the Amazon Picking Challenge 2015 dataset.
+- [ycb](http://rll.eecs.berkeley.edu/ycb/): the YCB dataset.
+- [apc2015](http://rll.berkeley.edu/amazon_picking_challenge/): the Amazon Picking Challenge 2015 dataset.
 
 
 ## Robots ##
