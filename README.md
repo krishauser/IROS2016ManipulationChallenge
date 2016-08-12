@@ -134,7 +134,7 @@ The best scores on each task, maximized over all runs conducted on that task, wi
 The task scores will then be totaled to obtain an overall score.
 
 
-### Task 1 ### 
+### Task 1 
 
 Task 1 is to lift as many balls as possible from a box and deposit them into a second box. 
 To run the program, you will enter:
@@ -146,7 +146,7 @@ Balls that are successfully transferred receive 1 point, and balls that are drop
 either box incur a penalty of 0.5 points.
 
 
-### Task 2 ### 
+### Task 2 
 
 Task 2 is to extract as many objects as possible from a clutered shelf.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
