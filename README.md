@@ -100,13 +100,6 @@ you selected.  This is because the transforms are being saved to
 IROS2016ManipulationChallenge/resources/[dataset]/*.xform.
 
 
-## Bug reporting ##
-
-Bugs in the framework can be reported to the IROS Grasping and Manipulation Challenge mailing
-list (TBD).  Bug fixes will be also reported to the mailing list.
-
-Other questions can be directed to Kris Hauser at kris.hauser@duke.edu and Alessio Rocchi at
-rocchi.alessio@gmail.com.
 
 
 ## Running the competition tasks ##
@@ -142,6 +135,7 @@ The task scores will then be totaled to obtain an overall score.
 
 
 ### Task 1 ### 
+
 Task 1 is to lift as many balls as possible from a box and deposit them into a second box. 
 To run the program, you will enter:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -153,6 +147,7 @@ either box incur a penalty of 0.5 points.
 
 
 ### Task 2 ### 
+
 Task 2 is to extract as many objects as possible from a clutered shelf.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 > python main.py shelf [# of objects]
@@ -161,3 +156,12 @@ Task 2 is to extract as many objects as possible from a clutered shelf.
 Objects that are successfully extracted and placed into the box are given 5 points each.
 
 
+
+
+## Bug Reporting and Contact ##
+
+Bugs in the framework can be reported to the IROS Grasping and Manipulation Challenge mailing
+list (TBD).  Bug fixes will be also reported to the mailing list.
+
+Other questions can be directed to Kris Hauser at kris.hauser@duke.edu and Alessio Rocchi at
+rocchi.alessio@gmail.com.
