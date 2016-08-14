@@ -141,7 +141,7 @@ would include the use of Rospy or implementing custom serial communications.
 Teams will have up to 30 minutes to demonstrate the execution of these tasks, and consists of
 some number of ``runs'' on a given task.  Each run continues until the team decides to stop it. 
 The best scores on each task, maximized over all runs conducted on that task, will be recorded.
-The task scores will then be totaled to obtain an overall score.
+Individual task scores will then be totaled to obtain an overall score.
 
 
 ### Task 1 ###

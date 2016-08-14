@@ -361,6 +361,12 @@ def xy_randomize(obj,bmin,bmax):
 	obj.setTransform(R,t)
 
 def xy_jiggle(world,objects,fixed_objects,bmin,bmax,iters,randomize = True):
+	"""Jiggles the objects' x-y positions within the range bmin - bmax, and randomizes orientation about the z
+	axis until the objects are collision free.  A list of fixed objects (fixed_objects) may be given as well.
+
+	Objects for which collision-free resolutions are not found after iters steps will be
+	deleted from the world.
+	"""
 	if randomize:
 		for obj in objects:
 			xy_randomize(obj,bmin,bmax)
