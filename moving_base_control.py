@@ -1,4 +1,4 @@
-"""Common code for handling moving bases"""
+"""Common code for handling free-floating moving bases"""
 
 from klampt.math import so3
 

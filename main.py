@@ -454,15 +454,6 @@ def launch_shelf(robotname,objects):
 	for l in range(world.numRigidObjects()):
 		sim.body(world.rigidObject(l)).setCollisionPreshrink(visPreshrink)
 
-	#get references to the robot's sensors (not properly functioning in 0.6.x)
-	f1_proximal_takktile_sensors = [sim.controller(0).sensor("f1_proximal_takktile_%d"%(i,)) for i in range(1,6)]
-	f1_distal_takktile_sensors = [sim.controller(0).sensor("f1_distal_takktile_%d"%(i,)) for i in range(1,6)]
-	f2_proximal_takktile_sensors = [sim.controller(0).sensor("f2_proximal_takktile_%d"%(i,)) for i in range(1,6)]
-	f2_distal_takktile_sensors = [sim.controller(0).sensor("f2_distal_takktile_%d"%(i,)) for i in range(1,6)]
-	f3_proximal_takktile_sensors = [sim.controller(0).sensor("f3_proximal_takktile_%d"%(i,)) for i in range(1,6)]
-	f3_distal_takktile_sensors = [sim.controller(0).sensor("f3_distal_takktile_%d"%(i,)) for i in range(1,6)]
-	contact_sensors = f1_proximal_takktile_sensors + f1_distal_takktile_sensors + f2_proximal_takktile_sensors + f2_distal_takktile_sensors + f3_proximal_takktile_sensors + f3_distal_takktile_sensors
-
 	#create a hand emulator from the given robot name
 	module = importlib.import_module('plugins.'+robotname)
 	#emulator takes the robot index (0), start link index (6), and start driver index (6)

@@ -1,4 +1,9 @@
+"""Common code for handling the Righthand Robotics ReFlex gripper"""
+
 class ReflexController:
+	"""A controller that simply provides convenient accesss to the ReFlex's contact sensors.
+	It will print out contact sensor readings every type __call__ is called if verbose is set to True.
+	"""
 	def __init__(self,sim,hand,dt):
 		self.sim = sim
 		self.hand = hand

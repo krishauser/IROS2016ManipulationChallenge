@@ -102,6 +102,10 @@ If you re-run the program with the same object, you will see the last gripper tr
 you selected.  This is because the transforms are being saved to
 IROS2016ManipulationChallenge/resources/[dataset]/*.xform.
 
+To modify the controller for the basic test you may modify the simple_controller.py
+file.  In this file, a single function called make() produces a control function that
+gets called repeatedly during the simulation.  You are free to put whatever code you wish
+into the control function. 
 
 
 
@@ -117,11 +121,14 @@ sensors or use other innovative control approaches are eligible for honorable me
 
 ### Programming ###
 
-Teams will demonstrate their work on their own machines, and they may use any external modules
-and data as necessary to accomplish their task.  However, the scenario setup, simulation, and
-visualization code for each scenario must remain unchanged (for example, object coefficients of
-friction may not be increased to make objects easier to grasp).  Adherence to these rules will be
-verified by inspecting the winning team's code.
+Teams will demonstrate their work on their own machines and will generate their
+controller inside the make() functions inside balls_controller.py and shelf_controller.py. 
+Teams may use any external modules and data as necessary to accomplish their task.  However,
+the scenario setup, simulation, and visualization code for each scenario in main.py must
+remain unchanged (for example, object coefficients of friction may not be increased to make
+objects easier to grasp).  For competition, judges will copy a new file main_competition.py
+onto teams' computers and run it.  This file will be very similar to main.py and will use
+teams' supplied controllers (and, if applicable, new hand plugins) to drive the robot. 
 
 Bindings from Python to other software packages can be done through a number of means, either by 
 embedding external modules into Python code or by running parallel processes and performing
@@ -140,19 +147,20 @@ The task scores will then be totaled to obtain an overall score.
 ### Task 1 ###
 
 Task 1 is to lift as many balls as possible from a box and deposit them into a second box. 
-To run the program, you will enter:
+Code for this controller should be placed into balls_controller.py.  To run the program, enter:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 > python main.py balls [# of balls]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Balls that are successfully transferred receive 1 point, and balls that are dropped outside
-either box incur a penalty of 0.5 points.
+either box incur a penalty of 0.5 points. 
 
 ![Image of Task 1](https://github.com/krishauser/IROS2016ManipulationChallenge/blob/master/images/balls.png "Image of balls mode")
 
 ### Task 2 ###
 
 Task 2 is to extract as many objects as possible from a clutered shelf.
+Code for this controller should be placed into shelf_controller.py.  To run the program, enter:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 > python main.py shelf [# of objects]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
