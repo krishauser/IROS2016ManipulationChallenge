@@ -33,9 +33,10 @@ You can design your own robots or grippers in URDF format with Klamp't's additio
 See the Klamp't URDF import tutorial at
 http://motion.pratt.duke.edu/klampt/tutorial_import_robot.html for more details.
 
-For more advanced sensors, actuators, and underactuation, you can also develop simulation plugins.
-Documentation for this feature is still under development, but its main functionality should be fairly
-straightforward.  See the Klampt/Python/klampt/sim/simulation.py file for the API, and plugins/reflex_col.py
+For more advanced sensors, actuators, and underactuated transmission mechanisms, you can develop simulation
+plugins that allow you to apply and inspect underlying forces in the physics simulation. Documentation for
+this feature is still under development, but its main functionality should be fairly straightforward. 
+See the Klampt/Python/klampt/sim/simulation.py file for the API, and the plugins/reflex_col.py
 file for an example of an implementation for the Reflex hand.
 
 
@@ -46,7 +47,7 @@ the two versions, most significantly in the Python API import structure and the 
 simulation (specifically, the ContactSensor, LaserSensor, and DepthCameraSensor types, and functionality
 for "baking in" sensors into robot files). 
 
-Version 0.7 is strongly recommended to get the latest features and bug fixes, however, it is still
+Version 0.7 is strongly recommended to get the latest features and bug fixes, but be warned that it is still
 under active development and some of the older online documentation has not yet been updated.
 It is possible to use 0.6.x for this competition, but you will not have the capability to simulate certain
 sensors (e.g., contact sensors).
@@ -112,7 +113,7 @@ into the control function.
 ## Running the competition tasks ##
 
 In the competition, your job will be to develop a controller that drives the robot such that
-it performs the following tasks.  Teams are allowed to use any robot model theywish, provided
+it performs the following tasks.  Teams are allowed to use any robot model they wish, provided
 that it sufficiently reproduces the behavior of some physical robot hand (either a commercial
 product or an experimental device are acceptable).  Teams are also permitted to access
 "omniscient" sensor data, such as the positions of moving objects and contact forces, rather
@@ -121,20 +122,32 @@ sensors or use other innovative control approaches are eligible for honorable me
 
 ### Programming ###
 
-Teams will demonstrate their work on their own machines and will generate their
-controller inside the make() functions inside balls_controller.py and shelf_controller.py. 
-Teams may use any external modules and data as necessary to accomplish their task.  However,
-the scenario setup, simulation, and visualization code for each scenario in main.py must
-remain unchanged (for example, object coefficients of friction may not be increased to make
-objects easier to grasp).  For competition, judges will copy a new file main_competition.py
-onto teams' computers and run it.  This file will be very similar to main.py and will use
-teams' supplied controllers (and, if applicable, new hand plugins) to drive the robot. 
+Teams will demonstrate their work on their own machines and will rewrite balls_controller.py
+and shelf_controller.py as necessary to accomplish the tasks.  Any external modules and data
+may be used as needed.  However, the scenario setup, simulation, and visualization code for
+each scenario in main.py must remain unchanged (for example, object coefficients of friction
+may not be increased to make objects easier to grasp). 
+
+Teams will rewrite the make() functions inside balls_controller.py and shelf_controller.py
+to produce a new control loop function.  Please inspect the example code in each file for
+detailed instructions about how to send commands and access sensors in your control loop.
+
+For competition, judges will copy a new file main_competition.py onto teams' computers and run
+it.  This file will be very similar to main.py and will use teams' supplied controllers to drive
+the robot in instances of the task scenarios.  Teams will not be told which instances they will 
+be judged on until the day of competition.  
+
+Note: if you have developed a new hand module, ensure that it can be run by changing the constant
+'reflex' at the bottom of main.py to the name of the new hand.  Your team will be judged on
+whatever simulated hand it wishes to use for competition as long as it qualitatively matches
+the behavior of some actual robot hand.
 
 Bindings from Python to other software packages can be done through a number of means, either by 
 embedding external modules into Python code or by running parallel processes and performing
 inter-process communication (IPC).  Instances of the embedding approach would include building Python
 wrappers or using the ctypes library to call shared library functions.  Instances of the IPC approach
 would include the use of Rospy or implementing custom serial communications.
+
 
 ### Runs and Scoring ###
 
@@ -156,6 +169,7 @@ Balls that are successfully transferred receive 1 point, and balls that are drop
 either box incur a penalty of 0.5 points. 
 
 ![Image of Task 1](https://github.com/krishauser/IROS2016ManipulationChallenge/blob/master/images/balls.png "Image of balls mode")
+
 
 ### Task 2 ###
 
