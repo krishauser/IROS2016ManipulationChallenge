@@ -85,17 +85,20 @@ are rather large datasets):
 [ Note: Version 0.6.x users will need to change some imports as instructed in the comments at the
  top of test.py and plugins/reflex_col.py ]
 
-The main test file is main.py.  It is run as follows:
+The main test file is main.py.  A basic debugging mode is run as follows:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-> python main.py [dataset] [index]
+> python main.py [dataset] [object index or name]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you do not specify a dataset or an index, one will be chosen for you at random.
+If you do not specify a dataset or an object, one will be chosen for you at random.
 You will see a dialog box to edit the transform of the gripper.  Once you press "OK",
 you will then see a simulation pop up where the gripper hopefully picks up the object.
 
-If you re-run the program with the same index, you will see the last gripper transform
+![Image of basic mode](https://github.com/krishauser/IROS2016ManipulationChallenge/images/basic.png "Image of basic mode")
+
+
+If you re-run the program with the same object, you will see the last gripper transform
 you selected.  This is because the transforms are being saved to
 IROS2016ManipulationChallenge/resources/[dataset]/*.xform.
 
@@ -145,6 +148,7 @@ To run the program, you will enter:
 Balls that are successfully transferred receive 1 point, and balls that are dropped outside
 either box incur a penalty of 0.5 points.
 
+![Image of Task 1](https://github.com/krishauser/IROS2016ManipulationChallenge/images/balls.png "Image of balls mode")
 
 ### Task 2 ###
 
@@ -155,7 +159,7 @@ Task 2 is to extract as many objects as possible from a clutered shelf.
 
 Objects that are successfully extracted and placed into the box are given 5 points each.
 
-
+![Image of Task 2](https://github.com/krishauser/IROS2016ManipulationChallenge/images/shelf.png "Image of shelf mode")
 
 
 ## Bug Reporting and Contact ##
