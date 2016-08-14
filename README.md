@@ -95,7 +95,7 @@ If you do not specify a dataset or an object, one will be chosen for you at rand
 You will see a dialog box to edit the transform of the gripper.  Once you press "OK",
 you will then see a simulation pop up where the gripper hopefully picks up the object.
 
-![Image of basic mode](https://github.com/krishauser/IROS2016ManipulationChallenge/images/basic.png "Image of basic mode")
+![Image of basic mode](https://github.com/krishauser/IROS2016ManipulationChallenge/blob/master/images/basic.png "Image of basic mode")
 
 
 If you re-run the program with the same object, you will see the last gripper transform
@@ -148,7 +148,7 @@ To run the program, you will enter:
 Balls that are successfully transferred receive 1 point, and balls that are dropped outside
 either box incur a penalty of 0.5 points.
 
-![Image of Task 1](https://github.com/krishauser/IROS2016ManipulationChallenge/images/balls.png "Image of balls mode")
+![Image of Task 1](https://github.com/krishauser/IROS2016ManipulationChallenge/blob/master/images/balls.png "Image of balls mode")
 
 ### Task 2 ###
 
@@ -159,7 +159,7 @@ Task 2 is to extract as many objects as possible from a clutered shelf.
 
 Objects that are successfully extracted and placed into the box are given 5 points each.
 
-![Image of Task 2](https://github.com/krishauser/IROS2016ManipulationChallenge/images/shelf.png "Image of shelf mode")
+![Image of Task 2](https://github.com/krishauser/IROS2016ManipulationChallenge/blob/master/images/shelf.png "Image of shelf mode")
 
 
 ## Bug Reporting and Contact ##
