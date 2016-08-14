@@ -6,20 +6,13 @@
 This package describes the simulation framework for the IROS 2016 Grasping and Manipulation
 Challenge.  In addition to its use in the IROS competition, it is also meant to be an open framework
 for benchmarking of robot hands and manipulation controllers.  Contributions are enthusiastically
-welcomed for new robots, datasets, task scenarios, and evaluation protocols.
+welcomed for new robots, object datasets, task scenarios, and evaluation protocols.
 
 The package is based on the [Klamp't](http://klampt.org) library, using the Python 2.7 language. 
 Klamp't is developed by Duke University for robotics research, visualization, and education.  Crucially
 for this competition, it can perform realistic robot physics simulation with scanned 3D objects.
 It can also simulate several robot sensors, such as force/torque sensors, contact sensors, and depth
 cameras.
-
-
-## Datasets ##
-
-The framework currently supports the following two object datasets:
-- [ycb](http://rll.eecs.berkeley.edu/ycb/): the YCB dataset.
-- [apc2015](http://rll.berkeley.edu/amazon_picking_challenge/): the Amazon Picking Challenge 2015 dataset.
 
 
 ## Robots ##
@@ -40,9 +33,16 @@ See the Klampt/Python/klampt/sim/simulation.py file for the API, and the plugins
 file for an example of an implementation for the Reflex hand.
 
 
+## Object Datasets ##
+
+The framework currently supports the following two object datasets:
+- [ycb](http://rll.eecs.berkeley.edu/ycb/): the YCB dataset.
+- [apc2015](http://rll.berkeley.edu/amazon_picking_challenge/): the Amazon Picking Challenge 2015 dataset.
+
+
 ## Dependencies ##
 
-Foremost, this requires the Klamp't 0.6.x or 0.7 Python APIs.  There are some API changes between 
+Foremost, this package requires the Klamp't 0.6.x or 0.7 Python APIs.  There are some API changes between 
 the two versions, most significantly in the Python API import structure and the physics engine's sensor
 simulation (specifically, the ContactSensor, LaserSensor, and DepthCameraSensor types, and functionality
 for "baking in" sensors into robot files). 
