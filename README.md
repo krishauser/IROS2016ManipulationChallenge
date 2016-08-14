@@ -4,13 +4,13 @@
 ### 8/10/2016 ###
 
 This package describes the simulation framework for the IROS 2016 Grasping and Manipulation
-Challenge.  Despite its use in the IROS competition, it is also meant to be an open framework
-for benchmarking of manipulation controllers.  Contributions are welcomed, particularly for
-new robots, datasets, and evaluation protocols.
+Challenge.  In addition to its use in the IROS competition, it is also meant to be an open framework
+for benchmarking of robot hands and manipulation controllers.  Contributions are enthusiastically
+welcomed for new robots, datasets, task scenarios, and evaluation protocols.
 
-The package is based on the Klamp't library, using the Python 2.7 language.  Klamp't is developed
-by Duke University for robotics research, visualization, and education.  Crucially for
-this competition, it can perform realistic robot physics simulation with scanned 3D objects.
+The package is based on the [Klamp't](http://klampt.org) library, using the Python 2.7 language. 
+Klamp't is developed by Duke University for robotics research, visualization, and education.  Crucially
+for this competition, it can perform realistic robot physics simulation with scanned 3D objects.
 It can also simulate several robot sensors, such as force/torque sensors, contact sensors, and depth
 cameras.
 
