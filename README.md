@@ -3,10 +3,12 @@
 ### Kris Hauser ###
 ### 8/10/2016 ###
 
-This package describes the simulation framework for the IROS 2016 Grasping and Manipulation
-Challenge.  In addition to its use in the IROS competition, it is also meant to be an open framework
+This package describes the simulation framework for the [IROS 2016 Grasping and Manipulation
+Challenge](http://www.rhgm.org/activities/competition_iros2016/). 
+
+In addition to its use in the IROS competition, this package is also meant to be an open framework
 for benchmarking of robot hands and manipulation controllers.  Contributions are enthusiastically
-welcomed for new robots, object datasets, task scenarios, and evaluation protocols.
+welcomed for new robots, object datasets, task scenarios, and evaluation protocols!
 
 The package is based on the [Klamp't](http://klampt.org) library, using the Python 2.7 language. 
 Klamp't is developed by Duke University for robotics research, visualization, and education.  Crucially
@@ -24,12 +26,14 @@ contact sensors.
 
 You can design your own robots or grippers in URDF format with Klamp't's additional XML specifications.
 See the Klamp't URDF import tutorial at
-http://motion.pratt.duke.edu/klampt/tutorial_import_robot.html for more details.
+[http://motion.pratt.duke.edu/klampt/tutorial_import_robot.html](http://motion.pratt.duke.edu/klampt/tutorial_import_robot.html)
+for more details.
 
 For more advanced sensors, actuators, and underactuated transmission mechanisms, you can develop simulation
 plugins that allow you to apply and inspect underlying forces in the physics simulation. Documentation for
 this feature is still under development, but its main functionality should be fairly straightforward. 
-See the Klampt/Python/klampt/sim/simulation.py file for the API, and the plugins/reflex_col.py
+See the [Klampt/Python/klampt/sim/simulation.py][simulation_py]
+file for the API, and the [plugins/reflex_col.py][reflex_col_py]
 file for an example of an implementation for the Reflex hand.
 
 
@@ -58,9 +62,10 @@ not yet available.  Windows power users can build the package with some some (su
 Visual Studio.
 
 Foremost, you will need to install the Klamp't Python API from source.  Follow the Installation 
-Tutorial found on http://motion.pratt.duke.edu/klampt/tutorial_install.html.  You will need to install
-Assimp and PyQt4 as instructed in the tutorial.  The master branch is still at v0.6.2, so to get
-v0.7, you will need to perform the following tweaks:
+Tutorial found on [http://motion.pratt.duke.edu/klampt/tutorial_install.html][klampt_install_tutorial].
+You will need to install Assimp and PyQt4 as instructed in the tutorial. 
+
+The master branch is still at v0.6.2, so to get v0.7, you will need to perform the following tweaks:
 - Before you build, switch to the v0.7 branch by running the following command line in the
   Klampt/ directory:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -126,13 +131,14 @@ sensors or use other innovative control approaches are eligible for honorable me
 
 ### Programming ###
 
-Teams will demonstrate their work on their own machines and will rewrite balls_controller.py
-and shelf_controller.py as necessary to accomplish the tasks.  Any external modules and data
+Teams will demonstrate their work on their own machines and will rewrite [balls_controller.py][balls_controller]
+and [shelf_controller.py][shelf_controller] as necessary to accomplish the tasks.  Any external modules and data
 may be used as needed.  However, the scenario setup, simulation, and visualization code for
 each scenario in main.py must remain unchanged (for example, object coefficients of friction
 may not be increased to make objects easier to grasp). 
 
-Teams will rewrite the make() functions inside balls_controller.py and shelf_controller.py
+Teams will rewrite the make() functions inside [balls_controller.py][balls_controller]
+and [shelf_controller.py][shelf_controller]
 to produce a new control loop function.  Please inspect the example code in each file for
 detailed instructions about how to send commands and access sensors in your control loop.
 
@@ -193,5 +199,14 @@ Objects that are successfully extracted and placed into the box are given 5 poin
 Bugs in the framework can be reported to the IROS Grasping and Manipulation Challenge mailing
 list (TBD).  Bug fixes will be also reported to the mailing list.
 
-Other questions can be directed to Kris Hauser at kris.hauser@duke.edu and Alessio Rocchi at
-rocchi.alessio@gmail.com.
+Other questions can be directed to Kris Hauser at [kris.hauser@duke.edu](mailto:kris.hauser@duke.edu)
+and Alessio Rocchi at [rocchi.alessio@gmail.com](mailto:rocchi.alessio@gmail.com).
+
+
+
+<!--- Links here -->
+[klampt_install_tutorial]: http://motion.pratt.duke.edu/klampt/tutorial_install.html
+[simulation_py]: https://github.com/krishauser/Klampt/blob/v0.7/Python/klampt/sim/simulation.py
+[reflex_col_py]: https://github.com/krishauser/IROS2016ManipulationChallenge/blob/master/plugins/reflex_col.py
+[balls_controller]: https://github.com/krishauser/IROS2016ManipulationChallenge/blob/master/balls_controller.py
+[shelf_controller]: https://github.com/krishauser/IROS2016ManipulationChallenge/blob/master/shelf_controller.py
