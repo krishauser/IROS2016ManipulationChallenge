@@ -40,8 +40,8 @@ file for an example of an implementation for the Reflex hand.
 ## Object Datasets ##
 
 The framework currently supports the following two object datasets:
-- [ycb](http://rll.eecs.berkeley.edu/ycb/): the YCB dataset.
-- [apc2015](http://rll.berkeley.edu/amazon_picking_challenge/): the Amazon Picking Challenge 2015 dataset.
+* [ycb](http://rll.eecs.berkeley.edu/ycb/): the YCB dataset.
+* [apc2015](http://rll.berkeley.edu/amazon_picking_challenge/): the Amazon Picking Challenge 2015 dataset.
 
 
 ## Dependencies ##
@@ -66,15 +66,16 @@ Tutorial found on [http://motion.pratt.duke.edu/klampt/tutorial_install.html][kl
 You will need to install Assimp and PyQt4 as instructed in the tutorial. 
 
 The master branch is still at v0.6.2, so to get v0.7, you will need to perform the following tweaks:
-- Before you build, switch to the v0.7 branch by running the following command line in the
+* Before you build, switch to the v0.7 branch by running the following command line in the
   Klampt/ directory:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 > git checkout v0.7
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  and run the following in Klampt/Library/KrisLibrary before you build the dependencies:
+* and run the following in Klampt/Library/KrisLibrary before you build the dependencies:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 > git checkout plan_devel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Now build as normal.
 
 Once Klamp't is built and installed, download the IROS2016ManipulationChallenge folder as follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -82,7 +83,6 @@ Once Klamp't is built and installed, download the IROS2016ManipulationChallenge 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Then download the YCB and APC2015 datasets as follows (note these are rather large datasets):
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 > cd IROS2016ManipulationChallenge/data/objects
 > python download_ycb.py
@@ -96,7 +96,6 @@ Then download the YCB and APC2015 datasets as follows (note these are rather lar
  top of test.py and plugins/reflex_col.py ]
 
 The main test file is main.py.  A basic debugging mode is run as follows:
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 > python main.py [dataset] [object index or name]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
