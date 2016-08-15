@@ -71,8 +71,12 @@ v0.7, you will need to perform the following tweaks:
 > git checkout plan_devel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once Klamp't is installed, download the YCB and APC2015 datasets as follows (note these
-are rather large datasets):
+Once Klamp't is built and installed, download the IROS2016ManipulationChallenge folder as follows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> git clone https://github.com/krishauser/IROS2016ManipulationChallenge.git
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Then download the YCB and APC2015 datasets as follows (note these are rather large datasets):
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 > cd IROS2016ManipulationChallenge/data/objects
