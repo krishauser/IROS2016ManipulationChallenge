@@ -40,6 +40,7 @@ file for an example of an implementation for the Reflex hand.
 ## Object Datasets ##
 
 The framework currently supports the following two object datasets:
+
 * [ycb](http://rll.eecs.berkeley.edu/ycb/): the YCB dataset.
 * [apc2015](http://rll.berkeley.edu/amazon_picking_challenge/): the Amazon Picking Challenge 2015 dataset.
 
@@ -66,6 +67,7 @@ Tutorial found on [http://motion.pratt.duke.edu/klampt/tutorial_install.html][kl
 You will need to install Assimp and PyQt4 as instructed in the tutorial. 
 
 The master branch is still at v0.6.2, so to get v0.7, you will need to perform the following tweaks:
+
 * Before you build, switch to the v0.7 branch by running the following command line in the
   Klampt/ directory:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
