@@ -198,7 +198,9 @@ Objects that are successfully extracted and placed into the box are given 5 poin
 ## Bug Reporting and Contact ##
 
 Bugs in the framework can be reported to the IROS Grasping and Manipulation Challenge mailing
-list (TBD).  Bug fixes will be also reported to the mailing list.
+list at [iros2016-manipulation-competition-sim@lists.duke.edu](mailto:iros2016-manipulation-competition-sim@lists.duke.edu).
+Bug fixes will be also reported to the mailing list.  To get the latest updates, please subscribe to the mailing list at
+[https://lists.duke.edu/sympa](https://lists.duke.edu/sympa).
 
 Other questions can be directed to Kris Hauser at [kris.hauser@duke.edu](mailto:kris.hauser@duke.edu)
 and Alessio Rocchi at [rocchi.alessio@gmail.com](mailto:rocchi.alessio@gmail.com).
