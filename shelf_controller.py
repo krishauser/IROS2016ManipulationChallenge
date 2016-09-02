@@ -27,13 +27,16 @@ def make(sim,hand,dt):
 			print "  finger 3:",[int(v) for v in f3_contact]
 		except:
 			pass
+		t_lift = 1
+		lift_traj_duration = 0.5
 		if sim.getTime() < 0.05:
 			#the controller sends a command to the hand: f1,f2,f3,preshape
 			hand.setCommand([0.2,0.2,0.2,0])
-		if sim.getTime() > 1:
+		if sim.getTime() >t_lift:
 			#the controller sends a command to the base after 1 s to lift the object
-			desired = se3.mul((so3.identity(),[0,0,0.10]),xform)
-			send_moving_base_xform_linear(controller,desired[0],desired[1],0.5)
+			t_traj = min(1, max(0, (sim.getTime() - t_lift) / lift_traj_duration))
+			desired = se3.mul((so3.identity(), [0, 0, 0.10 * t_traj]), xform)
+			send_moving_base_xform_PID(controller, desired[0], desired[1])
 		#need to manually call the hand emulator
 		hand.process({},dt)
 	return controlfunc
