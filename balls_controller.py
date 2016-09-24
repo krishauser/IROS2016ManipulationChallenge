@@ -22,10 +22,12 @@ class StateMachineController(ReflexController):
 
 		#controller state machine
 		#print "State:",state
+		t_lift = 2
+		lift_traj_duration = 0.5
 		if self.state == 'idle':
 			if sim.getTime() > 0.5:
 				desired = se3.mul((so3.identity(),[0,0,-0.10]),xform)
-				send_moving_base_xform_linear(controller,desired[0],desired[1],0.5)
+				send_moving_base_xform_linear(controller,desired[0],desired[1],lift_traj_duration)
 				self.state = 'lowering'
 		elif self.state == 'lowering':
 			if sim.getTime() > 1:
@@ -35,11 +37,16 @@ class StateMachineController(ReflexController):
 				self.hand.setCommand([0.2,0.2,0.2,0])
 				self.state = 'closing'
 		elif self.state == 'closing':
-			if sim.getTime() > 2:
-				#the controller sends a command to the base after 1 s to lift the object
-				desired = se3.mul((so3.identity(),[0,0,0.10]),xform)
-				send_moving_base_xform_linear(controller,desired[0],desired[1],0.5)
+			if sim.getTime() > t_lift:
+				self.base_xform = get_moving_base_xform(self.sim.controller(0).model())
 				self.state = 'raising'
+		elif self.state == 'raising':
+			#the controller sends a command to the base after 1 s to lift the object
+			t_traj = min(1, max(0, (sim.getTime() - t_lift) / lift_traj_duration))
+			desired = se3.mul((so3.identity(), [0, 0, 0.10 * t_traj]), xform)
+			send_moving_base_xform_PID(controller, desired[0], desired[1])
+			if sim.getTime() > (t_lift + lift_traj_duration):
+				self.state = 'raised'
 		
 def make(sim,hand,dt):
 	"""The make() function returns a 1-argument function that takes a SimRobotController and performs whatever
