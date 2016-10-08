@@ -27,8 +27,8 @@ shelf_height = 0.7
 moving_base_template_fn = 'data/robots/moving_base_template.rob'
 object_template_fn = 'data/objects/object_template.obj'
 objects = {}
-objects['ycb'] = [f for f in os.listdir('data/objects/ycb')]
-objects['apc2015'] = [f for f in os.listdir('data/objects/apc2015')]
+objects['ycb'] = [f for f in sorted(os.listdir('data/objects/ycb'))]
+objects['apc2015'] = [f for f in sorted(os.listdir('data/objects/apc2015'))]
 robots = ['reflex_col']
 
 object_geom_file_patterns = {
@@ -76,7 +76,7 @@ def make_object(object_set,objectname,world):
 		obj.setTransform(*se3.identity())
 		bmin,bmax = obj.geometry().getBB()
 		T = obj.getTransform()
-		spacing = 0.005
+		spacing = 0.006
 		T = (T[0],vectorops.add(T[1],(-(bmin[0]+bmax[0])*0.5,-(bmin[1]+bmax[1])*0.5,-bmin[2]+spacing)))
 		obj.setTransform(*T)
 		obj.appearance().setColor(0.2,0.5,0.7,1.0)
