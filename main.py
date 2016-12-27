@@ -1,19 +1,22 @@
-import pkg_resources
-pkg_resources.require("klampt>=0.7.0")
+import klampt
+pkg_resources.require("klampt>=0.6.2")
 from klampt import *
-#Klampt v0.6.x
-#from klampt import visualization as vis
-#from klampt import resource
-#from klampt import robotcollide as collide
-#from klampt.simulation import *
-#from klampt.glrobotprogram import *
-#Klampt v0.7.x
-from klampt import vis 
-from klampt.vis.glrobotprogram import *
-from klampt.math import *
-from klampt.model import collide
-from klampt.io import resource
-from klampt.sim import *
+if pkg_resources.get_distribution("klampt").version >= '0.7':
+	#Klampt v0.7.x
+	from klampt import vis 
+	from klampt.vis.glrobotprogram import *
+	from klampt.math import *
+	from klampt.model import collide
+	from klampt.io import resource
+	from klampt.sim import *
+else:
+	#Klampt v0.6.x
+	from klampt import visualization as vis
+	from klampt import resource
+	from klampt import robotcollide as collide
+	from klampt.simulation import *
+	from klampt.glrobotprogram import *
+
 from moving_base_control import *
 import importlib
 import os
@@ -546,6 +549,7 @@ if __name__ == '__main__':
 				try:
 					index = int(objname)
 					objname = objects[dataset][index]
+					print "('%s','%s')"%(dataset,objname)
 				except:
 					pass
 				shelved.append((dataset,objname))
