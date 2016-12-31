@@ -1,8 +1,8 @@
-import klampt
+import pkg_resources
 pkg_resources.require("klampt>=0.6.2")
-from klampt import *
 if pkg_resources.get_distribution("klampt").version >= '0.7':
 	#Klampt v0.7.x
+	from klampt import *
 	from klampt import vis 
 	from klampt.vis.glrobotprogram import *
 	from klampt.math import *
@@ -11,6 +11,7 @@ if pkg_resources.get_distribution("klampt").version >= '0.7':
 	from klampt.sim import *
 else:
 	#Klampt v0.6.x
+	from klampt import *
 	from klampt import visualization as vis
 	from klampt import resource
 	from klampt import robotcollide as collide
