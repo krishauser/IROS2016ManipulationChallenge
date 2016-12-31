@@ -1,12 +1,17 @@
-from klampt import *
-#Klampt v0.7
-from klampt.math import se3,vectorops
-from klampt.vis.glrobotprogram import *
-from klampt.sim.simulation import ActuatorEmulator
-#Klampt v0.6.x
-#from klampt import se3,vectorops
-#from klampt.glrobotprogram import *
-#from klampt.simulation import ActuatorEmulator
+import pkg_resources
+pkg_resources.require("klampt>=0.6.2")
+if pkg_resources.get_distribution("klampt").version >= '0.7':
+    #Klampt v0.7
+    from klampt import *
+    from klampt.math import se3,vectorops
+    from klampt.vis.glrobotprogram import *
+    from klampt.sim.simulation import ActuatorEmulator
+else:
+    #Klampt v0.6.x
+    from klampt import *
+    from klampt import se3,vectorops
+    from klampt.glrobotprogram import *
+    from klampt.simulation import ActuatorEmulator
 
 #The hardware name
 gripper_name = 'reflex'
@@ -355,10 +360,10 @@ class HandSimGLViewer(GLSimulationProgram):
         if self.simulate:
             self.control_loop()
             self.sim.simulate(self.control_dt)
-            glutPostRedisplay()
+            self.refresh()
 
     def print_help(self):
-        GLSimulationProgram.print_help()
+        GLSimulationProgram.print_help(self)
         print "y/h: raise/lower finger 1 command"
         print "u/j: raise/lower finger 2 command"
         print "i/k: raise/lower finger 3 command"
@@ -401,7 +406,7 @@ class HandSimGLViewer(GLSimulationProgram):
             self.handsim.setCommand(u)
         else:
             GLSimulationProgram.keyboardfunc(self,c,x,y)
-        glutPostRedisplay()
+        self.refresh()
 
 
 
