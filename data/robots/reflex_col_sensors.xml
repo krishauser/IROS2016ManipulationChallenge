@@ -1,6 +1,6 @@
 <sensors>
   <JointPositionSensor name="encoders" indices="3 8 12 2"/>
-  <DriverTorqueSensor name="current" indices="3 8 12 2" />
+  <DriverTorqueSensor name="current" indices="1 3 5 0" />
   <ContactSensor name="f1_proximal_takktile_1" link="6" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 -0.007" patchMax="0.007 0.007" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
   <ContactSensor name="f1_proximal_takktile_2" link="6" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 0.001" patchMax="0.007 0.015" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
   <ContactSensor name="f1_proximal_takktile_3" link="6" Tsensor="1 0 0  0 0 1   0 -1 0   0 0.015 -0.018 " patchMin="-0.007 0.009" patchMax="0.007 0.023" patchTolerance="0.004" falloffCoefficient="1.0" fSensitivity="0.1" fSaturation="3 3 3" />
