@@ -214,7 +214,7 @@ def launch_simple(robotname,object_set,objectname,use_box=False):
 	set_moving_base_xform(robot,xform[0],xform[1])
 
 	#now the simulation is launched
-	program = GLSimulationProgram(world)
+	program = GLSimulationPlugin(world)
 	sim = program.sim
 
 	#setup some simulation parameters
