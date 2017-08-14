@@ -3,7 +3,7 @@ pkg_resources.require("klampt>=0.6.2")
 if pkg_resources.get_distribution("klampt").version >= '0.7':
     #Klampt v0.7
     from klampt import *
-    from klampt.math import se3,vectorops
+    from klampt.math import se3,so3,vectorops
     from klampt.vis.glrobotprogram import *
     from klampt.sim.simulation import ActuatorEmulator
 else:
@@ -344,7 +344,7 @@ class HandEmulator(ActuatorEmulator):
         glEnable(GL_LIGHTING)
 
 
-class HandSimGLViewer(GLSimulationProgram):
+class HandSimGLViewer(GLSimulationPlugin):
     def __init__(self,world,base_link=0,base_driver=0):
         GLSimulationProgram.__init__(self,world,"Reflex simulation program")
         self.handsim = HandEmulator(self.sim,0,base_link,base_driver)
